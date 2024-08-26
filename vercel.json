@@ -1,14 +1,19 @@
 {
   "version": 2,
-  "routes": [
-    { "handle": "filesystem" },
+  "builds": [
     {
-      "src": "/magneturl",
-      "dest": "./Streaming.js"
+      "src": "Streaming.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/video",
+      "dest": "/api/video"
     },
     {
-      "src": "/(.*)",
-      "dest": "./Streaming.js"
+      "src": "/",
+      "dest": "/api/index"
     }
   ]
 }
