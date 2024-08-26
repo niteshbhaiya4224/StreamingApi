@@ -9,11 +9,11 @@
   "routes": [
     {
       "src": "/video",
-      "dest": "/api/video"
+      "dest": "/video"
     },
     {
       "src": "/",
-      "dest": "/api/index"
+      "dest": "/index"
     }
   ]
 }
