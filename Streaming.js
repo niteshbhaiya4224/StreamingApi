@@ -47,6 +47,11 @@ function initializeTorrent(magnetLink) {
 // Initialize the engine with the default magnet link
 initializeTorrent(defaultMagnetLink);
 
+// Route to check if the API is working
+app.get("/", (req, res) => {
+  res.send("Streaming API is working!");
+});
+
 app.get("/video", function (req, res) {
   // Check if a magnet link was provided as a query parameter
   const magnetLink = req.query.magnetlink
